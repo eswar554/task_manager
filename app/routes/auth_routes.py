@@ -11,7 +11,7 @@ from app.controllers.auth_controller import (
 
 router = APIRouter(prefix="/auth", tags=["Auth"])
 
-@router.post("/restart")
+@router.post("/register")
 def register(user: UserCreate, db: Session = Depends(get_db)):
     return register_user_controller(user, db)
 
